@@ -103,7 +103,50 @@ https://8kdx6rx8h4.execute-api.us-east-1.amazonaws.com/prod/producto?limit= {LIM
 }
 ```
 
+### GET SearchProduct:
+* La api recibe 3 parametros { QUERY, LATITUD, LONGITUD, OFFSET, LIMITE }
+
+/*
+ * https://8kdx6rx8h4.execute-api.us-east-1.amazonaws.com/prod/productos?string=aceite&lat=-34.59880069999999&lng=-58.431125699999996&offset=0&limit=10
+ */
+
+https://8kdx6rx8h4.execute-api.us-east-1.amazonaws.com/prod/productos?string= {QUERY} &lat= {LATITUD} &lng= {LONGITUD} &offset= {OFFSET} &limit= {LIMITE}
+
+* Search response:
+
+``` Json
+{
+  "status": 200,
+  "total": 63,
+  "maxLimitPermitido": 100,
+  "maxCantSucursalesPermitido": 50,
+  "productos": [
+    {
+      "marca": "CAÑUELAS",
+      "id": "7792180005359",
+      "precioMax": 87.69,
+      "precioMin": 86.55,
+      "nombre": "Aceite CañUelas Girasol Alto Oleico y Oliva X 1.50 Lt",
+      "presentacion": "1.5 lt"
+    }
+  ],
+  "totalPagina": 10
+}
+```
+
+### GET ProductImage:
+* La URL de la imagen recibe el ID de la imagen que trae el response del search.
+
+http://imagenes.preciosclaros.gob.ar/productos/ { IMAGE_ID } .jpg
+
+* Si no hay imagen del producto es necesario insertar una imagen place_holder
+
+
+
+
+
 ### Apps que usan los servicios:
 https://play.google.com/store/apps/details?id=ar.com.comprando.comprando
+
 https://play.google.com/store/apps/details?id=com.pochigil.preciosclaros
 
