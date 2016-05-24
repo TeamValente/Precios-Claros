@@ -106,9 +106,7 @@ https://8kdx6rx8h4.execute-api.us-east-1.amazonaws.com/prod/producto?limit= {LIM
 ### GET SearchProduct:
 * La api recibe 3 parametros { QUERY, LATITUD, LONGITUD, OFFSET, LIMITE }
 
-/*
- * https://8kdx6rx8h4.execute-api.us-east-1.amazonaws.com/prod/productos?string=aceite&lat=-34.59880069999999&lng=-58.431125699999996&offset=0&limit=10
- */
+[comment]: # https://8kdx6rx8h4.execute-api.us-east-1.amazonaws.com/prod/productos?string=aceite&lat=-34.59880069999999&lng=-58.431125699999996&offset=0&limit=10
 
 https://8kdx6rx8h4.execute-api.us-east-1.amazonaws.com/prod/productos?string= {QUERY} &lat= {LATITUD} &lng= {LONGITUD} &offset= {OFFSET} &limit= {LIMITE}
 
